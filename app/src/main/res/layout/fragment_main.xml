@@ -5,14 +5,13 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:padding="@dimen/main_padding"
+        tools:context=".fragment.MainFragment">
 
-    <fragment android:id="@+id/mainNavFragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:navGraph="@navigation/main_navigation"
-        app:defaultNavHost="true"/>
-
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listTransactionsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
